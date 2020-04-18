@@ -86,6 +86,10 @@ namespace WitcherScriptMerger.LoadOrder
                 if (!ProcessPriorityLine(line, lineNum, setting))
                     return false;
             }
+            else if (line.StartsWith("VK="))
+            {
+                // Ignore
+            }
             else if (!string.IsNullOrWhiteSpace(line) && !line.StartsWith(";"))
             {
                 ShowWarningForMalformedFile($"Unrecognized value on line {lineNum}:\n\n{line}");
