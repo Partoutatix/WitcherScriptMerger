@@ -4,6 +4,8 @@
     {
         public string ModName { get; set; }
 
+        public string VK { get; set; }
+
         public bool? IsEnabled { get; set; }
 
         public int? Priority { get; set; }
